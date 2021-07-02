@@ -1,0 +1,8 @@
+/* 滚动条样式 */
+body{ font-size: 16px!important; background: #f7f7f7; font-family: 'jiangxizhuokairegular';}
+body::-webkit-scrollbar { width: 13px; height: 13px;}
+body::-webkit-scrollbar-corner { background: transparent;}
+body::-webkit-scrollbar-track,body::-webkit-scrollbar-thumb { min-height: 20px; background-clip: content-box; box-shadow: 0 0 0 5px rgba(0, 0, 0, .2) inset;}
+body::-webkit-scrollbar-track { box-shadow: 1px 1px 5px rgba(0, 0, 0, .2) inset;}
+body::-webkit-scrollbar-track-piece { border-radius: 999px; border: 5px solid transparent;}
+body::-webkit-scrollbar-track, body::-webkit-scrollbar-thumb { border-radius: 999px; border: 5px solid transparent;}
