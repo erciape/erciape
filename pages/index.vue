@@ -59,7 +59,23 @@
                         </div>
                     </div>
                     <div class="hot">
-
+                        <div class="title">
+                            <h4><span></span>热门文章</h4>
+                        </div>
+                        <div class="article-list">
+                            <ul>
+                                <li><span style="color: #fe2d46;">1 &nbsp;</span>从入门到放弃！</li>
+                                <li><span style="color: #f60;">2 &nbsp;</span>从入门到放弃！</li>
+                                <li><span style="color: #faa90e;">3 &nbsp;</span>从入门到放弃！</li>
+                                <li><span>4 &nbsp;</span>从入门到放弃！</li>
+                                <li><span>5 &nbsp;</span>从入门到放弃！</li>
+                                <li><span>6 &nbsp;</span>从入门到放弃！</li>
+                                <li><span>7 &nbsp;</span>从入门到放弃！</li>
+                                <li><span>8 &nbsp;</span>从入门到放弃！</li>
+                                <li><span>9 &nbsp;</span>从入门到放弃！</li>
+                                <li><span>10</span>从入门到放弃！</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -202,6 +218,42 @@ export default {
                     padding: 14px;
                     background: #fff;
                     box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+                    .title {
+                        height: 20px;
+                        line-height: 20px;
+                        h4 {
+                            color: #40485b;
+                            padding-bottom: 9px;
+                            border-bottom: 1px solid #e7e7e7;
+                            span {
+                            border: 3px solid #fe2d46;
+                            font-size: 10px;
+                            margin-right: 10px;
+                            }
+                        }
+                    }
+                    .article-list {
+                        margin-top: 10px;
+                        ul {
+                            display: flex;
+                            justify-self: start;
+                            flex-direction: column;
+                            padding: 5px;
+                            li {
+                                width: 100%;
+                                height: 40px;
+                                line-height: 40px;
+                                border-bottom: 1px dashed #e7e7e7;
+                                color: #666;
+                                font-size: 15px;
+                                span {
+                                    font-size: 15px;
+                                    color: #9195a3;
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

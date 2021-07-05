@@ -83,7 +83,7 @@ export default {
                 #blog-name {
                     font-weight: bold;
                     font-size: 20px;
-                    color: #58666e;
+                    color: #fff;
                 }
             }
             ul {
@@ -98,7 +98,7 @@ export default {
                     position: relative;
                     a {
                         padding-right: 3px;
-                        color: #58666e;
+                        color: #fff;
                         outline: none;
                         i {
                             font-size: 17px;
@@ -107,7 +107,10 @@ export default {
                     }
                     &:hover {
                         font-weight: bold;
-                        color: #000;
+                        animation: shake 1s .2s ease both infinite;
+                        * {
+                            color: #40485b !important;
+                        }
                     }
                 }
             }
@@ -117,6 +120,9 @@ export default {
     background: rgba(171, 171, 171, .3);
     backdrop-filter: saturate(300%) blur(10px);
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2); 
+    * {
+            color:#58666e !important;
+        }
     }
 
     // IE 不支持毛玻璃效果
