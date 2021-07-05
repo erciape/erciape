@@ -33,6 +33,7 @@ export default {
     '~assets/css/reset.css',
     '~assets/iconfont/iconfont.css',
     '~assets/css/body.css',
+    'mavon-editor/dist/css/index.css'
   ],
 
   styleResources: {
@@ -44,6 +45,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/element-ui.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

@@ -43,7 +43,7 @@ export default {
         padding: 0;
         width: 100%;
         height: 100%;
-        background-image: url(../assets/img/tengyuandoufudian.jpg);
+        background-image: url(~/assets/img/tengyuandoufudian.jpg);
         background-repeat: no-repeat;
         background-size: 100% 100vh;
         .card {
@@ -70,6 +70,9 @@ export default {
                     height: 20px;
                     line-height: 20px;
                     font-size: 20px;
+                    h1 {
+                        margin-left: 170px;
+                    }
                 }
                 .content {
                     width: 55%;
@@ -80,6 +83,9 @@ export default {
                     top: -180px;
                     .rows {
                         margin-bottom: 50px;
+                    }
+                    .confirm {
+                        margin-left: 150px;
                     }
                 }
             }

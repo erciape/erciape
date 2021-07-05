@@ -6,9 +6,12 @@
 
 import Vue from 'vue'
 import { 
+    Table,
+    TableColumn,
     Button,
     Message,
-    Dialog,Input,
+    Dialog,
+    Input,
     Select,
     Option,
     Checkbox,
@@ -44,5 +47,7 @@ Vue.use(Tooltip);
 Vue.use(Progress);
 Vue.use(Drawer);
 Vue.use(Backtop);
+Vue.use(Table);
+Vue.use(TableColumn);
 Vue.component(Button.name, Button)
 Vue.prototype.$message = Mess

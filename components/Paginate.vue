@@ -1,5 +1,5 @@
 <template>
-    <div class="paginate-class">
+    <div class="paginate">
         <p class="left" @click="dec" :class="{ leftBan : value <= 1 }">-</p>
         <input type="text" class="input" @input="$emit('input', $event.target.value)" :value="value" readonly>
         <p class="right" @click="inc" :class="{ rightBan : value >= max }">+</p>
@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .paginate-class {
+    .paginate {
         width: 200px;
         height: 30px;
         border: 1px solid #C0C4CC;
@@ -58,6 +58,7 @@ export default {
             line-height: 25px;
             color: #606266;
             cursor: pointer;
+            text-align: center;
         }
         .leftBan {
             cursor: not-allowed;
@@ -71,6 +72,7 @@ export default {
             line-height: 30px;
             color: #606266;
             cursor: pointer;
+            text-align: center;
         }
         .rightBan {
             cursor: not-allowed;

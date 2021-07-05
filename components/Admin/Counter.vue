@@ -1,19 +1,19 @@
 <template>
-    <div class="counter-class">
-        <div class="current-page-class">
-            <div class="goto-home-class">
+    <div class="counter">
+        <div class="current-page">
+            <div class="goto-home">
                 <i class="iconfont iconshouye"></i>
             </div>
-            <div class="page-name-class">
+            <div class="page-name">
                 <span> - {{ pageName }}</span>
             </div>
         </div>
-        <div class="search-class">
+        <div class="search">
             <el-input class="input-with-select" v-model="value" size="small"  placeholder="输入关键字搜索">
                 <el-button slot="append" @click="search" icon="el-icon-search"></el-button>
             </el-input>
         </div>
-        <div class="total-class">
+        <div class="total">
             <i class="iconfont iconwenzhangguanli"></i>
             <span>总数：{{ total }}</span>
         </div>
@@ -46,19 +46,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .counter-class {
+    .counter {
         width: 100%;
         height: 60px;
         line-height: 60px;
         display: flex;
         justify-content: space-between;
         color: #58666e;
-        .current-page-class {
+        .current-page {
             width: 200px;
             line-height: 60px;
             display: flex;
             justify-content: flex-start;
-            .goto-home-class {
+            .goto-home {
                 cursor: pointer;
                 padding: 0 10px;
                 .iconshouye {
@@ -66,11 +66,11 @@ export default {
                 }
             }
         }
-        .search-class {
+        .search {
             width: 250px;
             padding: 5px 0 0 0;
         }
-        .total-class {
+        .total {
             width: 150px;
             line-height: 60px;
             padding: 0 10px;

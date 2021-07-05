@@ -1,2 +1,209 @@
 <template>
+    <article id="index">
+        <Header></Header>
+        <section class="article">
+            <div class="article-list">
+                <ArticleCard></ArticleCard>
+                <ArticleCard></ArticleCard>
+                <ArticleCard></ArticleCard>
+                <ArticleCard></ArticleCard>
+				<Paginate></Paginate>
+			</div>
+            <div class="info-column">
+                <div class="card">
+                    <div class="author">
+                        <div class="avatar">
+                            <img src="@/assets/img/avatar.jpg" alt="">
+                        </div>
+                        <div class="name">
+                            <h2><span>二次猿</span></h2>
+                            <p><a href="javascript:;">查看简介</a></p>
+                        </div>
+                        <div class="setting">
+                            <button style="background: #fe7300; color: #fff;">
+                                <i class="iconfont iconiconfontzhizuobiaozhun023148"></i>
+                                <span>点赞</span>
+                            </button>
+                            <button style="border: 1px solid #eee; background: #fff; color: #40485B">
+                                <i class="iconfont iconyouxiang"></i>
+                                <span>私信</span>
+                            </button>
+                        </div>
+                        <div class="info">
+                            <div class="rows">
+                                <div class="grid">
+                                    <a href="javascript:;">
+                                        <div class="count">999</div>
+                                        <div class="name">点赞</div>
+                                    </a>
+                                </div>
+                                <div class="grid">
+                                    <a href="javascript:;">
+                                        <div class="count">999</div>
+                                        <div class="name">收藏</div>
+                                    </a>
+                                </div>
+                                <div class="grid">
+                                    <a href="javascript:;">
+                                        <div class="count">999</div>
+                                        <div class="name">关注</div>
+                                    </a>
+                                </div>
+                                <div class="grid">
+                                    <a href="javascript:;">
+                                        <div class="count">999</div>
+                                        <div class="name">投币</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hot">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
 </template>
+
+<script>
+import ArticleCard from '@/components/Web/ArticleCard'
+import Header from '@/components/Web/Header'
+import Paginate from '@/components/Paginate'
+export default {
+    name: 'index',
+    data () {
+        return {
+
+        }
+    },
+    components: {
+        Header,
+        Paginate,
+        ArticleCard
+    }
+}
+</script>
+
+<style lang="scss" scoped>
+    .article {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+        .info-column {
+            .card {
+                width: 280px;
+                height: auto;
+                .author {
+                    width: 100%;
+                    margin-top: 40px;
+                    padding: 14px;
+                    background: #fff;
+                    box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+                    .avatar {
+                        position: relative;
+                        margin: 0 auto 10px;
+                        width: 160px;
+                        height: 160px;
+                        cursor: pointer;
+                        img {
+                            margin: 0;
+                            width: 100%;
+                            height: 100%;
+                            border: 4px solid #EEE;
+                            margin-right: 0.25em;
+                            display: inline-block;
+                            border-radius: 500rem;
+                        }
+                    }
+                    .name {
+                        text-align: center;
+                        h2 {
+                            margin: 30px 0 0;
+                            word-break: break-all;
+                            color: #40485b;
+                            span {
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 3;
+                                -webkit-box-orient: vertical;
+                                font-size: 22px;
+                                font-weight: bold;
+                                letter-spacing: 3px;
+                            }
+                        }
+                        p {
+                            margin: 15px;
+                            font-size: 13px;
+                            cursor: pointer;
+                            a {
+                                color: #8c92a4;
+                            }
+                        }
+                    }
+                    .setting {
+                        margin: 15px auto;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -ms-flex-pack: distribute;
+                        justify-content: space-around;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        button {
+                            border: 0;
+                            width: 45%;
+                            height: 32px;
+                            font-size: 14px;
+                        }
+                    }
+                    .info {
+                        -webkit-box-sizing: inherit;
+                        box-sizing: inherit;
+                        .rows {
+                            padding: 0 1rem;
+                            margin-top: -10px;
+                            margin-bottom: -1rem;
+                            margin-left: -1rem;
+                            margin-right: -1rem;
+                            display: block;
+                            text-align: left;
+                            font-size: 0em;
+                            display: flex;
+                            justify-self: start;
+                            .grid {
+                                padding: 1rem 0;
+                                text-align: center;
+                                width: 25% !important;
+                                a {
+                                    cursor: pointer;
+                                    color: #005980;
+                                    .count {
+                                        font-size: 18px;
+                                        font-weight: bold;
+                                    }
+                                    .name {
+                                        padding-top: 5px;
+                                        color: #40485b;
+                                        font-size: 12px;
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .hot {
+                    width: 100%;
+                    margin-top: 40px;
+                    padding: 14px;
+                    background: #fff;
+                    box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+                }
+            }
+        }
+    }
+</style>

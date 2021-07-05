@@ -1,5 +1,5 @@
 <template>
-    <div class="panel-class">
+    <div class="panel">
         <slot></slot>
     </div>
 </template>
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .panel-class {
+    .panel {
         width: calc(100% - 220px - 80px);
         background: #f9f9f9;
         margin: 30px 25px 30px 20px;

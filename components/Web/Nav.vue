@@ -1,5 +1,5 @@
 <template>
-    <div class="nav-class" :class="{ nav_shadow: show_shadow }">
+    <div id="nav" :class="{ nav_shadow: show_shadow }">
         <div class="nav-content">
             <a href="javascript:;">
                 <!-- <img src="@/assets/logo.png" alt=""> -->
@@ -30,12 +30,6 @@
                         <span>留言板</span>
                     </a>
                 </li>
-                <!-- <li>
-                    <a href="javascript:;" >
-                        <i class="iconfont icontupian"></i>
-                        <span>照片墙</span>
-                    </a>
-                </li> -->
                 <li>
                     <a href="javascript:;" >
                         <i class="iconfont iconyonghu1"></i>
@@ -67,7 +61,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .nav-class {
+    #nav {
         width: 100%;
         height: 50px;
         line-height: 50px;

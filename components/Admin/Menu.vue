@@ -1,18 +1,18 @@
 <template>
-    <div class="menu-class">
-        <div class="user-menu-class">
+    <div id="menu">
+        <div class="user-info">
             <h1>hello world</h1>
         </div>
-        <div class="menu" v-for="(item, index) in list" :key="index">
+        <div class="menu-content" v-for="(item, index) in list" :key="index">
             <p @click="showChildMenu(index)">
                 <i class="iconfont" :class="item.icon" @click="reset"></i>
                 <span>{{ item.title }}</span>
                 <i class="iconfont iconshousuo1" :class="{iconxuanzhuan: item.childMenuBool}"></i>
             </p>
             <ul :class="{childShow: item.childMenuBool}" v-if="item.childList && item.childList.length" :style="{height: item.childMenuBool && item.childList && item.childList.length ? 40 * item.childList.length + 'px' : '0'}">
-                <router-link tag='li' v-for="(items, indexs) in item.childList" :key="indexs" :to="items.route">
+                <nuxt-link tag='li' v-for="(items, indexs) in item.childList" :key="indexs" :to="items.route">
                 {{ items.title }}
-                </router-link>
+                </nuxt-link>
             </ul>
         </div>
     </div>
@@ -29,8 +29,8 @@ export default {
                     {title: '发布文章', route: '/admin/article/publish'},
                 ]},
                 {title: '笔记管理', icon: 'iconbiji', childMenuBool: false, childList: [
-                    {title: '笔记列表', route: '/admin/notes/list'},
-                    {title: '发布笔记', route: '/admin/notes/publish'},
+                    {title: '笔记列表', route: '/admin/note/list'},
+                    {title: '发布笔记', route: '/admin/note/publish'},
                 ]},
                 {title: '后台管理', icon: 'iconshezhi', childMenuBool: false, childList: [
                     {title: '后台信息', route: '/admin/system/info'},
@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .menu-class {
+    #menu {
         width: 220px;
         height: 100vh;
         background: #f9f9f9;
@@ -67,19 +67,20 @@ export default {
         position: fixed;
         left: 0;
         top: 0;
-        .user-menu-class {
+        .user-info {
             width: 100%;
             height: 60px;
             line-height: 60px;
             border-bottom: 2px solid #eee;
             padding: 15px 0;
             h1 {
+                text-align: center;
                 font-size: 19px;
                 color: #58666e;
                 font-weight: bold;
             }
         }
-        .menu {
+        .menu-content {
             p {
                 width: 100%;
                 height: 56px;
@@ -135,8 +136,9 @@ export default {
                     height: 40px;
                     font-size: 14px;
                     line-height: 40px;
-                    margin-left: -20px;   
-                    &.router-link-active {
+                    margin-left: -20px;
+                    text-align: center;   
+                    &.nuxt-link-active {
                         color: #fff;
                         background: #DCDFE6;
                     }
