@@ -1,6 +1,7 @@
 <template>
     <div class="article-card">
-
+        <div class=""></div>
+        <div></div>
     </div>
 </template>
 

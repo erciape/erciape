@@ -246,10 +246,16 @@ export default {
                                 border-bottom: 1px dashed #e7e7e7;
                                 color: #666;
                                 font-size: 15px;
+                                cursor: pointer;
                                 span {
                                     font-size: 15px;
                                     color: #9195a3;
                                     margin-right: 10px;
+                                }
+                                &:hover {
+                                    color: #fe2d46;
+                                    font-weight: bold;
+                                    font-size: 16px;
                                 }
                             }
                         }

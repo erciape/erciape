@@ -3,39 +3,14 @@
         <div class="nav-content">
             <a href="javascript:;">
                 <!-- <img src="@/assets/logo.png" alt=""> -->
-                <span id="blog-name">hello world</span>
+                <span id="blog-name">二次猿</span>
             </a>
             <ul>
-                <li>
-                    <a href="javascript:;" >
-                        <i class="iconfont iconshouye"></i>
-                        <span>首页</span>    
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;" >
-                        <i class="iconfont iconshu"></i>
-                        <span>文章分类</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;" >
-                        <i class="iconfont iconshijianxian"></i>
-                        <span>归档</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;" >
-                        <i class="iconfont iconxie"></i>
-                        <span>留言板</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;" >
-                        <i class="iconfont iconyonghu1"></i>
-                        <span>关于我</span>
-                    </a>
-                </li>
+                <nuxt-link tag="li" to="/"><i class="iconfont iconshouye"></i><span>首页</span></nuxt-link>
+                <nuxt-link tag="li" to="/articleClass"><i class="iconfont iconshu"></i><span>文章分类</span></nuxt-link>
+                <nuxt-link tag="li" to="/file"><i class="iconfont iconshijianxian"></i><span>归档</span></nuxt-link>
+                <nuxt-link tag="li" to="/message"><i class="iconfont iconxie"></i><span>留言板</span></nuxt-link>
+                <nuxt-link tag="li" to="/author"><i class="iconfont iconyonghu1"></i><span>关于我</span></nuxt-link>
             </ul>
         </div>
     </div>
@@ -84,6 +59,7 @@ export default {
                     font-weight: bold;
                     font-size: 20px;
                     color: #fff;
+                    letter-spacing: 5px;
                 }
             }
             ul {
@@ -96,14 +72,13 @@ export default {
                     display: flex;
                     justify-content: center;
                     position: relative;
-                    a {
-                        padding-right: 3px;
-                        color: #fff;
-                        outline: none;
-                        i {
-                            font-size: 17px;
-                            padding-right: 5px;
-                        }
+                    padding-right: 3px;
+                    color: #fff;
+                    outline: none;
+                    cursor: pointer;
+                    i {
+                        font-size: 17px;
+                        padding-right: 5px;
                     }
                     &:hover {
                         font-weight: bold;
