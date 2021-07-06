@@ -1,5 +1,5 @@
 <template>
-    <article id="file">
+    <article id="categories">
         <Header :title="pageName" :type="type"></Header>
     </article>
 </template>
@@ -7,19 +7,19 @@
 <script>
 import Header from '@/components/Web/Header'
 export default {
-    name: 'file',
+    name: 'categories',
     head () {
         return {
-            title: '二次猿-归档',
+            title: '二次猿-文章分类',
             meta: [
-                { hid: 'description-file', name: 'description', content: '二次猿，二次猿博客，二次猿的技术博客, 归档' }
+                { hid: 'description-categories', name: 'description', content: '二次猿，二次猿博客，二次猿的技术博客, 文章分类' }
             ]
         }
     },
     data () {
         return {
-            pageName: '归档',
-            type: 'file'
+            pageName: '文章分类',
+            type: 'categories'
         }
     },
     components: {

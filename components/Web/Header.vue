@@ -1,7 +1,11 @@
 <template>
     <div class="header" :class="{ small: small }">
-        <img src="@/assets/img/img.jpg" alt="">
-        <p>博客主页</p>
+        <img src="@/assets/img/index_BG.jpg" alt="" v-if="type == 'index'">
+        <img src="@/assets/img/index_BG.jpg" alt="" v-if="type == 'categories'">
+        <img src="@/assets/img/index_BG.jpg" alt="" v-if="type == 'file'">
+        <img src="@/assets/img/index_BG.jpg" alt="" v-if="type == 'message'">
+        <img src="@/assets/img/index_BG.jpg" alt="" v-if="type == 'author'">
+        <p>{{ title }}</p>
     </div>
 </template>
 
@@ -9,7 +13,15 @@
 export default {
     data () {
         return {
-            small: false
+            small: false,
+        }
+    },
+    props: {
+        title: {
+            type: String
+        },
+        type: {
+            type: String
         }
     },
     mounted() {

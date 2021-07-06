@@ -1,7 +1,22 @@
 <template>
     <div class="article-card">
-        <div class=""></div>
-        <div></div>
+        <!-- <nuxt-link tag="div" :to="{ path: `/article/${ article.id }` }" class="img">
+            <img :src="imgUrl" alt="">
+        </nuxt-link>
+        <div class="context">
+            <nuxt-link tag="p" :to="{path: `/article/${ article.id }`}" class="title">{{ article.title }}</nuxt-link>
+            <p class="details">
+                <span class="time" v-if="article.update_time">
+                    <i class="iconfont icontime"></i>
+                    {{ article.update_time.substr(0,10) }}
+                </span>
+                <span class="tag">
+                    <i class="iconfont iconmark"></i>
+                    {{ article.skill_tag }}
+                </span>
+            </p>
+            <p class="describe">{{ article.description }}</p>
+        </div> -->
     </div>
 </template>
 

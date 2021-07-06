@@ -43,7 +43,7 @@ export default {
         padding: 0;
         width: 100%;
         height: 100%;
-        background-image: url(~/assets/img/tengyuandoufudian.jpg);
+        background-image: url(~/assets/img/login_BG.jpg);
         background-repeat: no-repeat;
         background-size: 100% 100vh;
         .card {

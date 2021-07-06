@@ -1,13 +1,10 @@
 <template>
     <div id="nav" :class="{ nav_shadow: show_shadow }">
         <div class="nav-content">
-            <a href="javascript:;">
-                <!-- <img src="@/assets/logo.png" alt=""> -->
-                <span id="blog-name">二次猿</span>
-            </a>
+            <nuxt-link tag="span" id="name" to="/">二次猿</nuxt-link>
             <ul>
                 <nuxt-link tag="li" to="/"><i class="iconfont iconshouye"></i><span>首页</span></nuxt-link>
-                <nuxt-link tag="li" to="/articleClass"><i class="iconfont iconshu"></i><span>文章分类</span></nuxt-link>
+                <nuxt-link tag="li" to="/categories"><i class="iconfont iconshu"></i><span>文章分类</span></nuxt-link>
                 <nuxt-link tag="li" to="/file"><i class="iconfont iconshijianxian"></i><span>归档</span></nuxt-link>
                 <nuxt-link tag="li" to="/message"><i class="iconfont iconxie"></i><span>留言板</span></nuxt-link>
                 <nuxt-link tag="li" to="/author"><i class="iconfont iconyonghu1"></i><span>关于我</span></nuxt-link>
@@ -44,22 +41,18 @@ export default {
         position: fixed;
         top: 0;
         transition: .2s;
-        // background: rgba(171, 171, 171, .3);
-        // backdrop-filter: saturate(150%) blur(10px);
         .nav-content {
             padding: 0 40px;
             display: flex;
             justify-content: space-between;
-            a {
-                img {
-                    width: 125px;
-                    height: 45px;
-                }
-                #blog-name {
-                    font-weight: bold;
-                    font-size: 20px;
-                    color: #fff;
-                    letter-spacing: 5px;
+            #name {
+                font-weight: bold;
+                font-size: 20px;
+                color: #fff;
+                letter-spacing: 5px;
+                cursor: pointer;
+                &:hover {
+                    animation: shake 1s .2s ease both infinite;
                 }
             }
             ul {
@@ -74,7 +67,6 @@ export default {
                     position: relative;
                     padding-right: 3px;
                     color: #fff;
-                    outline: none;
                     cursor: pointer;
                     i {
                         font-size: 17px;

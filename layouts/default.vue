@@ -22,8 +22,13 @@ export default {
     components: {
         Nav,
         Footer,
-        SideBar
+        SideBar,
     },
+    watch: {
+		$route () {
+			this.changeShow()
+		}
+	},
     methods: {
         changeShow () {
 			if ( this.$route.path == '/login' || window.location.href.indexOf('/admin') != -1 || this.$route.path == '/404') {

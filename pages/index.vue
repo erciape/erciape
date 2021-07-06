@@ -1,13 +1,13 @@
 <template>
     <article id="index">
-        <Header></Header>
+        <Header :title="pageName" :type="type"></Header>
         <section class="article">
             <div class="article-list">
                 <ArticleCard></ArticleCard>
                 <ArticleCard></ArticleCard>
                 <ArticleCard></ArticleCard>
                 <ArticleCard></ArticleCard>
-				<Paginate></Paginate>
+				<WebPaginate></WebPaginate>
 			</div>
             <div class="info-column">
                 <div class="card">
@@ -64,16 +64,11 @@
                         </div>
                         <div class="article-list">
                             <ul>
-                                <li><span style="color: #fe2d46;">1 &nbsp;</span>从入门到放弃！</li>
-                                <li><span style="color: #f60;">2 &nbsp;</span>从入门到放弃！</li>
-                                <li><span style="color: #faa90e;">3 &nbsp;</span>从入门到放弃！</li>
-                                <li><span>4 &nbsp;</span>从入门到放弃！</li>
-                                <li><span>5 &nbsp;</span>从入门到放弃！</li>
-                                <li><span>6 &nbsp;</span>从入门到放弃！</li>
-                                <li><span>7 &nbsp;</span>从入门到放弃！</li>
-                                <li><span>8 &nbsp;</span>从入门到放弃！</li>
-                                <li><span>9 &nbsp;</span>从入门到放弃！</li>
-                                <li><span>10</span>从入门到放弃！</li>
+                                <li><span style="color: #fe2d46;">1 </span>从入门到放弃！</li>
+                                <li><span style="color: #f60;">2 </span>从入门到放弃！</li>
+                                <li><span style="color: #faa90e;">3 </span>从入门到放弃！</li>
+                                <li><span>4 </span>从入门到放弃！</li>
+                                <li><span>5 </span>从入门到放弃！</li>
                             </ul>
                         </div>
                     </div>
@@ -87,17 +82,31 @@
 import ArticleCard from '@/components/Web/ArticleCard'
 import Header from '@/components/Web/Header'
 import Paginate from '@/components/Paginate'
+import WebPaginate from '@/components/Web/WebPaginate'
 export default {
     name: 'index',
+    head () {
+        return {
+            title: '二次猿-主页',
+            meta: [
+                { hid: 'description-index', name: 'description', content: '二次猿，二次猿博客，二次猿的技术博客, 主页' }
+            ]
+        }
+    },
     data () {
         return {
-
+            pageName: '博客主页',
+            type: 'index',
         }
+    },
+    mounted() {
+        
     },
     components: {
         Header,
         Paginate,
-        ArticleCard
+        ArticleCard,
+        WebPaginate
     }
 }
 </script>

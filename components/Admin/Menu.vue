@@ -1,8 +1,9 @@
 <template>
     <div id="menu">
-        <div class="user-info">
-            <h1>hello world</h1>
-        </div>
+        <nuxt-link tag="div" class="user-info" to="/">
+            <img src="../../assets/img/avatar.jpg" alt="">
+            <h1>二次猿</h1>
+        </nuxt-link>
         <div class="menu-content" v-for="(item, index) in list" :key="index">
             <p @click="showChildMenu(index)">
                 <i class="iconfont" :class="item.icon" @click="reset"></i>
@@ -73,11 +74,39 @@ export default {
             line-height: 60px;
             border-bottom: 2px solid #eee;
             padding: 15px 0;
+            display: flex;
+            justify-content: flex-start;
+            cursor: pointer;
+            img {
+                position: relative;
+                margin: 0 auto 10px;
+                width: 60px;
+                height: 60px;
+                margin: 0;
+                margin-left: 20px;
+                border: 4px solid #EEE;
+                margin-right: 0.25em;
+                display: inline-block;
+                border-radius: 500rem;
+                transition: All 0.4s ease-in-out;
+                -webkit-transition: All 0.4s ease-in-out;
+                -moz-transition: All 0.4s ease-in-out;
+                -o-transition: All 0.4s ease-in-out;
+                &:hover {
+                    transform: rotate(360deg) scale(1.2);
+                    -webkit-transform: rotate(360deg) scale(1.2);
+                    -moz-transform: rotate(360deg) scale(1.2);
+                    -o-transform: rotate(360deg) scale(1.2);
+                    -ms-transform: rotate(360deg) scale(1.2);
+                }
+            }
             h1 {
+                margin-left: 10px;
                 text-align: center;
                 font-size: 19px;
                 color: #58666e;
                 font-weight: bold;
+                letter-spacing: 5px;
             }
         }
         .menu-content {
