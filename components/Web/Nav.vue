@@ -7,6 +7,7 @@
                 <nuxt-link tag="li" to="/categories"><i class="iconfont iconshu"></i><span>文章分类</span></nuxt-link>
                 <nuxt-link tag="li" to="/file"><i class="iconfont iconshijianxian"></i><span>归档</span></nuxt-link>
                 <nuxt-link tag="li" to="/message"><i class="iconfont iconxie"></i><span>留言板</span></nuxt-link>
+                <nuxt-link tag="li" to="/friends"><i class="iconfont iconlianjie"></i><span>友情链接</span></nuxt-link>
                 <nuxt-link tag="li" to="/author"><i class="iconfont iconyonghu1"></i><span>关于我</span></nuxt-link>
             </ul>
         </div>
@@ -51,6 +52,7 @@ export default {
                 color: #fff;
                 letter-spacing: 5px;
                 cursor: pointer;
+                font-family: myFont,cursive;
                 &:hover {
                     animation: shake 1s .2s ease both infinite;
                 }
@@ -59,6 +61,7 @@ export default {
                 display: flex;
                 justify-content: flex-start;
                 padding-right: 17px;
+                font-family: "Roman-55", -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Serif SC", "PingFang SC", "Microsoft Yahei UI", "Microsoft Yahei", sans-serif !important;
                 li {
                     width: 140px;
                     text-align: center;

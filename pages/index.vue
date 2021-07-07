@@ -1,7 +1,7 @@
 <template>
     <article id="index">
         <Header :title="pageName" :type="type"></Header>
-        <section class="article">
+        <section class="animate__slideInUp container animate__animated article">
             <div class="article-list">
                 <ArticleCard></ArticleCard>
                 <ArticleCard></ArticleCard>
@@ -87,7 +87,7 @@ export default {
     name: 'index',
     head () {
         return {
-            title: '二次猿-主页',
+            title: '主页 | 二次猿',
             meta: [
                 { hid: 'description-index', name: 'description', content: '二次猿，二次猿博客，二次猿的技术博客, 主页' }
             ]

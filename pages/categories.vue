@@ -23,7 +23,7 @@ export default {
     name: 'categories',
     head () {
         return {
-            title: '二次猿-文章分类',
+            title: '文章分类 | 二次猿',
             meta: [
                 { hid: 'description-categories', name: 'description', content: '二次猿，二次猿博客，二次猿的技术博客, 文章分类' }
             ]
@@ -99,7 +99,7 @@ export default {
     #categories{
         padding-bottom: 20px;
         section.categories{
-            margin: 40px auto;
+            margin: -40px auto;
             .title {
                 margin-bottom: 40px;
             }

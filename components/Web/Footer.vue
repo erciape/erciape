@@ -40,7 +40,7 @@ export default {
         letter-spacing: 2px;
         cursor: pointer;
         color: #888;
-        font-size: 12px;
+        font-size: 13px;
         z-index: 1;
         display: flex;
         flex-direction: column;
@@ -48,7 +48,7 @@ export default {
         align-items: center;
         line-height: 24px;
         span, a {
-            font-family: Merriweather,"Open Sans","Microsoft Jhenghei","Microsoft Yahei",sans-serif!important;
+            font-family: myFont,cursive !important;
         }
         a {
             color: #888;

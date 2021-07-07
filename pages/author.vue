@@ -10,7 +10,7 @@ export default {
     name: 'author',
     head () {
         return {
-            title: '二次猿-关于二次猿',
+            title: '关于 | 二次猿',
             meta: [
                 { hid: 'description-author', name: 'description', content: '二次猿，二次猿博客，二次猿的技术博客, 作者' }
             ]

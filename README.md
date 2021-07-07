@@ -1,4 +1,4 @@
-# NuxtBlog
+# erciape
 
 ## Build Setup
 

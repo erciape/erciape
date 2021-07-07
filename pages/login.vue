@@ -23,6 +23,14 @@
 
 <script>
 export default {
+    head () {
+		return {
+			title: '登录 | 二次猿',
+			meta: [
+				{ hid: 'description-login', name: 'description', content: '二次猿，二次猿博客，二次猿的技术博客, 登录' }
+			]
+		}
+	},
     data () {
         return {
             email: '',

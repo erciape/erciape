@@ -4,6 +4,7 @@
         <img src="@/assets/img/index_BG.jpg" alt="" v-if="type == 'categories'">
         <img src="@/assets/img/index_BG.jpg" alt="" v-if="type == 'file'">
         <img src="@/assets/img/index_BG.jpg" alt="" v-if="type == 'message'">
+        <img src="@/assets/img/index_BG.jpg" alt="" v-if="type == 'friends'">
         <img src="@/assets/img/index_BG.jpg" alt="" v-if="type == 'author'">
         <p>{{ title }}</p>
     </div>
@@ -62,6 +63,7 @@ export default {
             font-size: 56px;
             letter-spacing: 10px;
             text-shadow: 4px 4px 8px #000;
+            font-family: myFont,cursive;
         }
     }
     .small {

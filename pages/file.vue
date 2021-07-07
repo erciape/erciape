@@ -1,31 +1,29 @@
 <template>
     <article id="file">
         <Header :title="pageName" :type="type"></Header>
-        <section class="white-card">
+        <section class="animate__slideInUp container animate__animated white-card">
             <div class="content">
                 <h1>共计 {{ total }}  篇文章</h1>
                 <hr>
                 <p class="date">{{ date }}</p>
                 <ul>
-                    <li><span>从入门到放弃！</span><span>2021-7-7</span></li>
-                    <li><span>从入门到放弃！</span><span>2021-7-7</span></li>
-                    <li><span>从入门到放弃！</span><span>2021-7-7</span></li>
-                    <li><span>从入门到放弃！</span><span>2021-7-7</span></li>
-                    <li><span>从入门到放弃！</span><span>2021-7-7</span></li>
-                    <li><span>从入门到放弃！</span><span>2021-7-7</span></li>
-                    <li><span>从入门到放弃！</span><span>2021-7-7</span></li>
-                    <li><span>从入门到放弃！</span><span>2021-7-7</span></li>
+                    <nuxt-link tag="li" to="/"><span>从入门到放弃！</span><span>2021-7-7</span></nuxt-link>
+                    <nuxt-link tag="li" to="/"><span>从入门到放弃！</span><span>2021-7-7</span></nuxt-link>
+                    <nuxt-link tag="li" to="/"><span>从入门到放弃！</span><span>2021-7-7</span></nuxt-link>
+                    <nuxt-link tag="li" to="/"><span>从入门到放弃！</span><span>2021-7-7</span></nuxt-link>
+                    <nuxt-link tag="li" to="/"><span>从入门到放弃！</span><span>2021-7-7</span></nuxt-link>
+                    <nuxt-link tag="li" to="/"><span>从入门到放弃！</span><span>2021-7-7</span></nuxt-link>
+                    <nuxt-link tag="li" to="/"><span>从入门到放弃！</span><span>2021-7-7</span></nuxt-link>
                 </ul>
                 <p class="date">2020</p>
                 <ul>
-                    <li><span>从入门到放弃！</span><span>2020-7-7</span></li>
-                    <li><span>从入门到放弃！</span><span>2020-7-7</span></li>
-                    <li><span>从入门到放弃！</span><span>2020-7-7</span></li>
-                    <li><span>从入门到放弃！</span><span>2020-7-7</span></li>
-                    <li><span>从入门到放弃！</span><span>2020-7-7</span></li>
-                    <li><span>从入门到放弃！</span><span>2020-7-7</span></li>
-                    <li><span>从入门到放弃！</span><span>2020-7-7</span></li>
-                    <li><span>从入门到放弃！</span><span>2020-7-7</span></li>
+                    <nuxt-link tag="li" to="/"><span>从入门到放弃！</span><span>2020-7-7</span></nuxt-link>
+                    <nuxt-link tag="li" to="/"><span>从入门到放弃！</span><span>2020-7-7</span></nuxt-link>
+                    <nuxt-link tag="li" to="/"><span>从入门到放弃！</span><span>2020-7-7</span></nuxt-link>
+                    <nuxt-link tag="li" to="/"><span>从入门到放弃！</span><span>2020-7-7</span></nuxt-link>
+                    <nuxt-link tag="li" to="/"><span>从入门到放弃！</span><span>2020-7-7</span></nuxt-link>
+                    <nuxt-link tag="li" to="/"><span>从入门到放弃！</span><span>2020-7-7</span></nuxt-link>
+                    <nuxt-link tag="li" to="/"><span>从入门到放弃！</span><span>2020-7-7</span></nuxt-link>
                 </ul>
             </div>
         </section>
@@ -38,7 +36,7 @@ export default {
     name: 'file',
     head () {
         return {
-            title: '二次猿-归档',
+            title: '归档 | 二次猿',
             meta: [
                 { hid: 'description-file', name: 'description', content: '二次猿，二次猿博客，二次猿的技术博客, 归档' }
             ]
@@ -65,7 +63,7 @@ export default {
         section {
             width: 1200px;
             padding: 0px 40px;
-            margin: 40px auto 0px auto;
+            margin: -40px auto 0px auto;
             .content {
                 width: 100%;
                 display: flex;
@@ -74,6 +72,7 @@ export default {
                 padding-left: 5%;
                 padding-right: 5%;
                 padding-bottom: 5%;
+                font-family: 'Architects Daughter', cursive!important;
                 h1 {
                     margin: 48px 0 22px -5px;
                     font-size: 2rem;
@@ -92,13 +91,11 @@ export default {
                     margin: 1.25rem 0 1.25rem 0;
                 }
                 ul {
-                    width: 100%;
                     background-color: #fff;
                     margin-left: 20px;
                     li {
                         width: 95%;
                         padding: .75rem 1.25rem;
-                        // color: #40485B;
                         color: #039be5;
                         display: flex;
                         justify-content: space-between;
@@ -109,7 +106,7 @@ export default {
                         &:hover {
                             background: #eee;
                             border-radius: 5px;
-                            color: #000;
+                            color: #40485B;
                             font-weight: bold;
                         }
                     }
@@ -118,7 +115,7 @@ export default {
         }
     }
     @media screen and (max-width: 1024px) {
-        #author {
+        #file {
             section {
                 width: 90%;
                 padding: 0;
