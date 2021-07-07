@@ -47,7 +47,7 @@ export default {
             justify-content: space-between;
             #name {
                 font-weight: bold;
-                font-size: 20px;
+                font-size: 25px;
                 color: #fff;
                 letter-spacing: 5px;
                 cursor: pointer;

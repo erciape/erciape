@@ -34,25 +34,25 @@
                                 <div class="grid">
                                     <a href="javascript:;">
                                         <div class="count">999</div>
+                                        <div class="name">文章</div>
+                                    </a>
+                                </div>
+                                <div class="grid">
+                                    <a href="javascript:;">
+                                        <div class="count">999</div>
                                         <div class="name">点赞</div>
                                     </a>
                                 </div>
                                 <div class="grid">
                                     <a href="javascript:;">
                                         <div class="count">999</div>
-                                        <div class="name">收藏</div>
+                                        <div class="name">浏览</div>
                                     </a>
                                 </div>
                                 <div class="grid">
                                     <a href="javascript:;">
                                         <div class="count">999</div>
-                                        <div class="name">关注</div>
-                                    </a>
-                                </div>
-                                <div class="grid">
-                                    <a href="javascript:;">
-                                        <div class="count">999</div>
-                                        <div class="name">投币</div>
+                                        <div class="name">留言</div>
                                     </a>
                                 </div>
                             </div>
