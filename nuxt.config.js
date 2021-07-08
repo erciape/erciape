@@ -22,6 +22,9 @@ export default {
     }, {
       src: '/js/baidu-seo.js',
       ssr: true
+    }, {
+      src: 'https://pv.sohu.com/cityjson?ie=utf-8',
+      ssr: true
     }]
   },
 
@@ -30,6 +33,7 @@ export default {
     'element-ui/lib/theme-chalk/index.css',
     '~assets/css/animate.css',
     '~assets/css/element-ui.css',
+    // '~assets/css/FiraCode.css',
     '~assets/css/markdown.css',
     '~assets/css/reset.css',
     '~assets/iconfont/iconfont.css',

@@ -60,9 +60,8 @@ export default {
             ul {
                 display: flex;
                 justify-content: flex-start;
-                padding-right: 17px;
                 li {
-                    width: 140px;
+                    width: 130px;
                     text-align: center;
                     display: flex;
                     justify-content: center;

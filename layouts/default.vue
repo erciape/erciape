@@ -1,9 +1,9 @@
 <template>
-    <main>
+    <main :class="{ bg : show }">
         <Nav v-show="nav_foot_show"></Nav>
         <Nuxt />
         <Footer v-show="nav_foot_show && foot_show"></Footer>
-        <SideBar></SideBar>
+        <SideBar v-show="nav_foot_show"></SideBar>
     </main>
 </template>
 
@@ -16,7 +16,8 @@ export default {
     data () {
         return {
             nav_foot_show: true,
-            foot_show: true
+            foot_show: true,
+            show: false
         }
     },
     components: {
@@ -27,11 +28,12 @@ export default {
     watch: {
 		$route () {
 			this.changeShow()
+            this.showBg()
 		}
 	},
     methods: {
         changeShow () {
-			if ( this.$route.path == '/login' || window.location.href.indexOf('/admin') != -1 || this.$route.path == '/404') {
+			if ( this.$route.path == '/login' || window.location.href.indexOf('/admin') != -1 || this.$route.path == '/404' || this.$route.path == '/bash') {
 				this.nav_foot_show = false
 			} else {
 				this.nav_foot_show = true
@@ -48,11 +50,19 @@ export default {
 			} else {
 				// this.$store.commit('webside/changeIsMobile', false)
 			}
-		}
+		},
+        showBg () {
+            if (this.$route.path == '/bash') {
+                this.show = true
+            } else {
+                this.show = false
+            }
+        }
     },
     mounted () {
         this.changeShow()
 		this.checkMobile()
+        this.showBg()
         require('/assets/js/colorLine.js')
     }
 }
@@ -61,5 +71,12 @@ export default {
 <style lang="scss" scoped>
     main {
         height: 100vh;
+    } 
+    .bg {
+        background-image: url(@/assets/img/login_BG.jpg);
+        background-repeat: no-repeat;
+        overflow: hidden !important;
+        background-size: cover;
+        background-attachment: fixed;
     }
 </style>

@@ -2,7 +2,7 @@
     <footer id="footer">
         <p>
             <span>
-                Copyright © 2021 | Powered By ZRM | Version: v1.0.0
+                Copyright © 2021 | Powered By erciape | Version: v1.0.0
             </span>
             <span>
                 Theme By <a href="https://www.xiaye.top" target="_black">xiaye</a>

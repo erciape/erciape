@@ -1,9 +1,9 @@
 <template>
     <div class="header" :class="{ small: small }">
-        <img src="@/assets/img/12.jpg" alt="" v-if="type == 'index'">
-        <img src="@/assets/img/31.jpg" alt="" v-if="type == 'categories'">
-        <img src="@/assets/img/41.jpg" alt="" v-if="type == 'file'">
-        <img src="@/assets/img/12.jpg" alt="" v-if="type == 'message'">
+        <img src="@/assets/img/index_BG.jpg" alt="" v-if="type == 'index'">
+        <img src="@/assets/img/categories_BG.jpg" alt="" v-if="type == 'categories'">
+        <img src="@/assets/img/file_BG.jpg" alt="" v-if="type == 'file'">
+        <img src="@/assets/img/index_BG.jpg" alt="" v-if="type == 'message'">
         <img src="@/assets/img/index_BG.jpg" alt="" v-if="type == 'friends'">
         <img src="@/assets/img/index_BG.jpg" alt="" v-if="type == 'author'">
         <p>{{ title }}</p>

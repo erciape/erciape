@@ -41,6 +41,10 @@ export default {
         login () {
             console.log('login')
         }
+    },
+    mounted () {
+        // require('https://v1.hitokoto.cn/?encode=js&select=.hito')
+        // require('https://pv.sohu.com/cityjson?ie=utf-8')
     }
 }
 </script>
@@ -53,7 +57,9 @@ export default {
         height: 100%;
         background-image: url(~/assets/img/login_BG.jpg);
         background-repeat: no-repeat;
-        background-size: 100% 100vh;
+        overflow: hidden !important;
+        background-size: cover;
+        background-attachment: fixed;
         .card {
             display: flex;
             justify-content: center;
@@ -61,7 +67,7 @@ export default {
             position: relative;
             z-index: 9999999 !important;
             top: 150px;
-            filter:alpha(Opacity=60);-moz-opacity:0.6;opacity: 0.9;
+            opacity: 0.7;
             .card-l {
                 background: #fff;
                 border-radius: 10px;

@@ -17,7 +17,7 @@
                         </div>
                         <div class="name">
                             <h2><span>二次猿</span></h2>
-                            <p><a href="javascript:;">查看简介</a></p>
+                            <p><a href="/bash">查看简介</a></p>
                         </div>
                         <div class="setting">
                             <button style="background: #fe7300; color: #fff;">
