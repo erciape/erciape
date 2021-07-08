@@ -61,7 +61,6 @@ export default {
                 display: flex;
                 justify-content: flex-start;
                 padding-right: 17px;
-                font-family: "Roman-55", -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Serif SC", "PingFang SC", "Microsoft Yahei UI", "Microsoft Yahei", sans-serif !important;
                 li {
                     width: 140px;
                     text-align: center;
@@ -74,6 +73,9 @@ export default {
                     i {
                         font-size: 17px;
                         padding-right: 5px;
+                    }
+                    span {
+                        font-family: miranafont,"Hiragino Sans GB",STXihei,"Microsoft YaHei",SimSun,sans-serif;
                     }
                     &:hover {
                         font-weight: bold;
