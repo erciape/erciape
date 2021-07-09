@@ -8,15 +8,15 @@
                     <div class="fg"></div>
                 </div>
                 <div class="meBox-text">
-                    <p>从入门到放弃！</p>
-                    <p>从入门到放弃！</p>
-                    <p>从入门到放弃！</p>
-                    <p>从入门到放弃！</p>
-                    <p>从入门到放弃！</p>
+                    <p>假装喜欢二次元💫</p>
+                    <p>喜欢编程编码💻</p>
+                    <p>干饭第一名🍙</p>
+                    <p>喜欢玩游戏🎮</p>
+                    <p>需要组队可以 滴滴 Me😎</p>
                 </div>
-                <div class="meBox-button">
-                    <a href=""></a>
-                    <a href=""></a>
+                <div class="meBox-Button">
+                    <a href="/author">关于👀</a>
+                    <a href="/">博客🎨</a>
                 </div>
             </div>
                 <div id="cmdBox">
@@ -75,7 +75,7 @@
                         <span style="color: rgb(0, 190, 0);">[root@erciape ~]</span>
                         <span style="color: blue;">#</span>
                         <span style="color: rgb(39, 39, 39);"> ./yiyan.sh</span>
-                        <p class="hito">只要心中有海，哪里都是马尔代夫！</p>
+                        <p class="hito">{{ hitokoto }}</p>
                         <span style="color: rgb(0, 190, 0);">[root@erciape ~]</span>
                         <span style="color: blue;">#</span>
                         <span style="color: rgb(39, 39, 39);"> ./ip.sh</span>
@@ -91,6 +91,7 @@
 </template>
 
 <script>
+import { getSentence } from '~/api/author'
 export default {
     name: 'bash',
     head () {
@@ -103,18 +104,24 @@ export default {
     },
     data () {
         return {
-            ip: ''
+            ip: '',
+            hitokoto: ''
         }
     },
     methods: {
-        getIp () {
+        async getIp () {
             this.ip = returnCitySN['cip']
+        },
+        async getSentence () {
+            let resp = await getSentence()
+            this.hitokoto = resp.data.data
         }
     },
     mounted () {
         require('/assets/css/FiraCode.css')
         require('/assets/css/flesx.css')
         this.getIp()
+        this.getSentence()
     }
 }
 </script>

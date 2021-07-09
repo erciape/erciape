@@ -87,6 +87,7 @@ export default {
     transpile: [/^element-ui/]
   },
   env: {
-    AXIOS_URL: process.env.NODE_ENV === 'production' ? 'https://api.erciape.com' : 'http://127.0.0.1:3000'
+    // AXIOS_URL: process.env.NODE_ENV === 'production' ? 'https://api.erciape.com' : 'http://127.0.0.1:3000'
+    AXIOS_URL: process.env.NODE_ENV === 'production' ? 'https://api.erciape.com' : 'http://192.168.0.115:9501'
   }
 }

@@ -1,29 +1,27 @@
 import axios from 'axios'
-// import { reject, resolve } from 'core-js/fn/promise'
+import { Message } from 'element-ui'
+import { getCookie } from '../utils/cookie'
 
 const instance = axios.create({
-    // baseURL: process.env.AXIOS_URL,
-    baseURL: 'http://www.feicnc.com',
+    baseURL: process.env.AXIOS_URL,
     withCredentials: true,
     timeout: 3000
 })
 
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 
-
 // 拦截器
 instance.interceptors.request.use(config => {
-    return config
+	return config
 },error => {
-    return Promise.reject(error);
+  	return Promise.reject(error);
 })
 
 instance.interceptors.response.use(response => {
-    return response
+	return response
 },error => {
-    return Promise.reject(error);
+  	return Promise.reject(error)
 })
-
 
 const request = ({
     url,
@@ -32,16 +30,16 @@ const request = ({
     data,
     headers,
     withCredentials = true,
-    // token
+    token
 }) => {
-    // if (token) {
-    //     console.log(document, getCookie('token'))
-    // }
+    if ( token ) {
+        console.log(document, getCookie('token'))
+    }
     let result = new Promise((resolve, reject) => {
-        switch (method) {
+        switch ( method ) {
             case 'POST':
                 instance.post(url, data, {
-                    withCredentials,
+                    withCredentials, 
                     headers
                 }).then(res => {
                     resolve(res)
@@ -49,6 +47,7 @@ const request = ({
                     reject(err)
                 })
                 break
+
             default:
                 instance.get(url, {
                     method,
