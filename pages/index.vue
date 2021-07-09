@@ -140,6 +140,17 @@ export default {
                             margin-right: 0.25em;
                             display: inline-block;
                             border-radius: 500rem;
+                            transition: All 0.4s ease-in-out;
+                            -webkit-transition: All 0.4s ease-in-out;
+                            -moz-transition: All 0.4s ease-in-out;
+                            -o-transition: All 0.4s ease-in-out;
+                            &:hover {
+                                transform: rotate(360deg) scale(1.1);
+                                -webkit-transform: rotate(360deg) scale(1.1);
+                                -moz-transform: rotate(360deg) scale(1.1);
+                                -o-transform: rotate(360deg) scale(1.1);
+                                -ms-transform: rotate(360deg) scale(1.1);
+                            }
                         }
                     }
                     .name {

@@ -109,7 +109,7 @@ export default {
         }
     },
     methods: {
-        async getIp () {
+        getIp () {
             this.ip = returnCitySN['cip']
         },
         async getSentence () {

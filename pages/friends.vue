@@ -5,12 +5,12 @@
             <div class="head">
                 <span>欢迎交换友情链接 </span><router-link tag="a" to="/author">快来联系我</router-link>
             </div>
-            <div class="links" v-for="(classes, index) in links" :key="index">
+            <!-- <div class="links" v-for="(classes, index) in links" :key="index">
                 <div class="head">{{ classes.name }}</div>
                 <div class="link">
                     <Links v-for="item in classes.data" :data="item" :key="item.id"></Links>
                 </div>
-            </div>
+            </div> -->
         </section>
     </article>
 </template>
@@ -61,7 +61,7 @@ export default {
     // },
     components: {
         Header,
-        Links
+        Links,
     },
     computed: {
         ...mapState({
