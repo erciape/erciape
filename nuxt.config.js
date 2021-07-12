@@ -33,7 +33,6 @@ export default {
     'element-ui/lib/theme-chalk/index.css',
     '~assets/css/animate.css',
     '~assets/css/element-ui.css',
-    // '~assets/css/FiraCode.css',
     '~assets/css/markdown.css',
     '~assets/css/reset.css',
     '~assets/iconfont/iconfont.css',
@@ -87,7 +86,7 @@ export default {
     transpile: [/^element-ui/]
   },
   env: {
-    AXIOS_URL: process.env.NODE_ENV === 'production' ? 'https://api.erciape.com' : 'http://192.168.3.112:9501'
-    // AXIOS_URL: process.env.NODE_ENV === 'production' ? 'https://api.erciape.com' : 'http://192.168.0.115:9501'
+    // AXIOS_URL: process.env.NODE_ENV === 'production' ? 'https://api.erciape.com' : 'http://192.168.3.112:9501'
+    AXIOS_URL: process.env.NODE_ENV === 'production' ? 'https://api.erciape.com' : 'http://192.168.0.115:9501'
   }
 }

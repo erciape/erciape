@@ -5,7 +5,7 @@
             <div class="header">
                 <img src="@/assets/img/avatar.jpg" alt="">
                 <div>
-                    <p class="text">二次猿 - PHP开发攻城狮</p>
+                    <p class="text">PHP开发攻城狮</p>
                     <p>
                         <el-tooltip class="item" effect="dark" content="QQ: 1577816211" placement="bottom">
                             <a target="_black" href="http://wpa.qq.com/msgrd?v=3&uin=1577816211&site=qq&menu=yes" class="small"><img src="@/assets/img/qq.png"></a>
@@ -83,8 +83,8 @@ export default {
             type: 'author',
             skills: {
                 long: [
-                    {name: 'PHP', percentage: 70, color: '#8892BF'},
-                    {name: 'ThinkPHP', percentage: 60, color: '#6FB737'},
+                    // {name: 'ThinkPHP', percentage: 60, color: '#6FB737'},
+                    {name: 'Linux', percentage: 70, color: '#203054'},
                     {name: 'Git', percentage: 60, color: '#24292E'},
                     {name: 'MySQL', percentage: 70, color: '#044970'},
                     {name: 'Redis', percentage: 60, color: '#D92B0D'},
@@ -92,15 +92,18 @@ export default {
                     {name: 'CSS3', percentage: 60, color: '#016FBA'},
                 ],
                 circle: [
-                    {name: 'Vue', percentage: 80, color: '#41B883'},
-                    {name: 'Webpack', percentage: 40, color: '#55A7DD'},
-                    {name: 'Node', percentage: 60, color: '#6DA55F'}
+                    {name: 'PHP', percentage: 80, color: '#8892BF'},
+                    {name: 'Swoole', percentage: 50, color: '#008DDF'},
+                    {name: 'Vue', percentage: 60, color: '#41B883'},
                 ]
             }
         }
     },
     components: {
         Header
+    },
+    mounted () {
+        require('/assets/css/FiraCode.css')
     }
 }
 </script>
@@ -131,6 +134,8 @@ export default {
                     margin: 40px auto 10px auto;
                     padding-bottom: 20px;
                     border-bottom: 1px solid #000;
+                    font-family: FiraCode !important;
+                    color: #3c4858;
                 }
                 p {
                     a {
@@ -151,6 +156,7 @@ export default {
                 margin-bottom: 40px;
                 p.title {
                     margin-bottom: 60px!important;
+                    font-family: FiraCode !important;
                 }
                 div.introduce {
                     text-indent: 2rem;
@@ -168,6 +174,7 @@ export default {
                         align-items: center;
                         p {
                             width: 90px;
+                            color: #3c4858;
                         }
                         > div {
                             width: 70%;

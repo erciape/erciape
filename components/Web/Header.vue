@@ -1,11 +1,11 @@
 <template>
     <div class="header" :class="{ small: small }">
         <img src="@/assets/img/index_BG.jpg" alt="" v-if="type == 'index'">
-        <img src="@/assets/img/categories_BG.jpg" alt="" v-if="type == 'categories'">
-        <img src="@/assets/img/file_BG.jpg" alt="" v-if="type == 'file'">
-        <img src="@/assets/img/index_BG.jpg" alt="" v-if="type == 'message'">
-        <img src="@/assets/img/index_BG.jpg" alt="" v-if="type == 'friends'">
-        <img src="@/assets/img/index_BG.jpg" alt="" v-if="type == 'author'">
+        <video loop autoplay src="@/assets/img/article_BG.webm" alt="" v-if="type == 'categories'" data-height="180" data-width="2104"></video>
+        <video loop autoplay src="@/assets/img/file_BG.webm" alt="" v-if="type == 'file'" data-height="180" data-width="2104"></video>
+        <video loop autoplay src="@/assets/img/message_BG.webm" alt="" v-if="type == 'message'" data-height="180" data-width="2104"></video>
+        <video loop autoplay src="@/assets/img/friends_BG.webm" alt="" v-if="type == 'friends'" data-height="180" data-width="2104"></video>
+        <video loop autoplay src="@/assets/img/author_BG.webm" alt="" v-if="type == 'author'" data-height="180" data-width="2104"></video>
         <p>{{ title }}</p>
     </div>
 </template>
@@ -44,18 +44,27 @@ export default {
 <style lang="scss" scoped>
     .header {
         width: 100%;
-        height: 50vh;
+        height: 60vh;
         overflow: hidden;
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
+        opacity: 1;
         img {
             width: 100%;
             height: 100%;
             position: absolute;
             left: 0;
             top: 0;
+        }
+        video {
+            width: 100%;
+            height: 400px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: inherit;
         }
         p {
             z-index: 2;
