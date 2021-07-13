@@ -60,7 +60,7 @@ export default {
         }
         video {
             width: 100%;
-            height: 400px;
+            height: 100%;
             position: absolute;
             left: 0;
             top: 0;
@@ -77,5 +77,10 @@ export default {
     }
     .small {
         height: 400px;
+    }
+    @media screen and (max-width: 3439px){
+        .small {
+            height: 300px;
+        }
     }
 </style>
